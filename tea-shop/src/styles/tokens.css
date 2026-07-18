@@ -1,0 +1,99 @@
+/* ---------------------------------------------------------------------------
+   tokens.css
+   Design tokens for the Tea Shop POS. Palette: warm cream, roasted brown,
+   tea-leaf green, and a chai-gold accent. Signature motif: a thermal-
+   receipt aesthetic (perforated edges, monospace numerals) paired with
+   soft glassmorphism panels that feel like steam on a window.
+--------------------------------------------------------------------------- */
+
+:root {
+  /* ---- Palette -------------------------------------------------------- */
+  --cream-50: #FBF7EE;
+  --cream-100: #F6EEDC;
+  --cream-200: #EFE3C8;
+  --cream-300: #E4D3AC;
+
+  --brown-900: #2A1B12;
+  --brown-800: #3C2A1C;
+  --brown-700: #563B26;
+  --brown-600: #6E4E32;
+  --brown-500: #8B6A4A;
+  --brown-300: #C4A483;
+
+  --green-800: #24382A;
+  --green-700: #33513B;
+  --green-600: #416A4A;
+  --green-500: #57815F;
+  --green-300: #96BC9A;
+
+  --gold-500: #C9963F;
+  --gold-300: #E3BE78;
+
+  --red-500: #B3452F;
+  --red-100: #F6DCD4;
+
+  /* ---- Typography ------------------------------------------------------ */
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* ---- Radii / shadows -------------------------------------------------- */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 8px rgba(42, 27, 18, 0.08);
+  --shadow-md: 0 8px 24px rgba(42, 27, 18, 0.12);
+  --shadow-lg: 0 20px 48px rgba(42, 27, 18, 0.18);
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-med: 260ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Light theme (default) ---------------------------------------------- */
+:root,
+[data-theme='light'] {
+  --bg-base: var(--cream-100);
+  --bg-elevated: var(--cream-50);
+  --bg-sidebar: rgba(255, 251, 242, 0.72);
+  --bg-glass: rgba(255, 255, 255, 0.55);
+  --bg-glass-strong: rgba(255, 255, 255, 0.78);
+  --border-glass: rgba(86, 59, 38, 0.14);
+
+  --text-primary: var(--brown-900);
+  --text-secondary: #6B5744;
+  --text-muted: #948267;
+  --text-inverse: var(--cream-50);
+
+  --accent-primary: var(--brown-700);
+  --accent-primary-hover: var(--brown-800);
+  --accent-secondary: var(--green-700);
+  --accent-gold: var(--gold-500);
+
+  --surface-hover: rgba(86, 59, 38, 0.06);
+  --scrollbar-thumb: rgba(86, 59, 38, 0.25);
+}
+
+/* ---- Dark theme ----------------------------------------------------------- */
+[data-theme='dark'] {
+  --bg-base: #1C130D;
+  --bg-elevated: #241A12;
+  --bg-sidebar: rgba(28, 19, 13, 0.78);
+  --bg-glass: rgba(60, 42, 28, 0.45);
+  --bg-glass-strong: rgba(60, 42, 28, 0.65);
+  --border-glass: rgba(228, 211, 172, 0.12);
+
+  --text-primary: var(--cream-100);
+  --text-secondary: #D7C6AC;
+  --text-muted: #A5947A;
+  --text-inverse: var(--brown-900);
+
+  --accent-primary: var(--gold-300);
+  --accent-primary-hover: var(--gold-500);
+  --accent-secondary: var(--green-300);
+  --accent-gold: var(--gold-300);
+
+  --surface-hover: rgba(228, 211, 172, 0.08);
+  --scrollbar-thumb: rgba(228, 211, 172, 0.2);
+}

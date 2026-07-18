@@ -1,0 +1,26 @@
+/* ---------------------------------------------------------------------------
+   print.css — when the user clicks "Print Bill", hide everything except
+   the receipt currently on screen (requirement #2 / #10).
+--------------------------------------------------------------------------- */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .receipt, .receipt * {
+    visibility: visible;
+  }
+  .receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background: #fff;
+    color: #000;
+  }
+  .sidebar, .toast-stack, .modal__actions, .sidebar__mobile-toggle {
+    display: none !important;
+  }
+}
